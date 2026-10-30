@@ -1,0 +1,33 @@
+# Gib deinem Projekt einen Namen! Projektnamen sollten nur Kleinbuchstaben
+# und Unterstriche enthalten. Ein guter Paketname sollte den Namen deiner Organisation
+# oder den geplanten Einsatz dieser Modelle widerspiegeln
+name: 'dbt_intro'
+version: '1.0.0'
+
+# Diese Einstellung legt fest, welches „Profil“ dbt für dieses Projekt nutzt.
+profile: 'dbt_intro'
+
+# Diese Konfigurationen legen fest, wo dbt nach den verschiedenen Dateitypen sucht.
+# Die Konfiguration `model-paths` besagt zum Beispiel, dass die Modelle dieses Projekts
+# im Verzeichnis „models/“ liegen. Wahrscheinlich musst du hier nichts ändern!
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:         # Verzeichnisse, die `dbt clean` entfernt
+  - "target"
+  - "dbt_packages"
+
+
+# Modelle konfigurieren
+# Vollständige Dokumentation: https://docs.getdbt.com/docs/configuring-models
+
+# In dieser Beispielkonfiguration sagen wir dbt, dass es alle Modelle im Verzeichnis
+# example/ als Views bauen soll. Diese Einstellungen lassen sich in den einzelnen
+# Modelldateien mit dem Makro `{{ config(...) }}` überschreiben.
+models:
+  dbt_intro:
+    # Konfiguration mit + gilt für alle Dateien unter models/example/
