@@ -36,12 +36,12 @@ dbt ist beliebt, denn damit lassen sich Transformationen im Warehouse leicht:
 
 Ein dbt-Projekt modelliert Daten meist in Schichten.
 
-| Schicht | Zweck |
-| --- | --- |
-| **Quelle / Rohdaten** | Von außen geladene Daten |
-| **Staging** | Leichte Bereinigung und Umbenennung von Spalten |
-| **Intermediate** | Wiederverwendbare Geschäftslogik oder Aggregationen |
-| **Mart** | Ergebnisse für Stakeholder |
+| Schicht                     | Zweck                                                |
+| --------------------------- | ---------------------------------------------------- |
+| **Quelle / Rohdaten** | Von außen geladene Daten                            |
+| **Staging**           | Leichte Bereinigung und Umbenennung von Spalten      |
+| **Intermediate**      | Wiederverwendbare Geschäftslogik oder Aggregationen |
+| **Mart**              | Ergebnisse für Stakeholder                          |
 
 ```mermaid
 flowchart LR
